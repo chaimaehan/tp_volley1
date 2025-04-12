@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Student App</string>
+    <string name="splash_title">Student App</string>
+    <string name="splash_subtitle">Student Application</string>
+
+    <string-array name="cities_array">
+        <item>Laayoune</item>
+        <item>Casablanca</item>
+        <item>Rabat</item>
+        <item>Marrakech</item>
+        <item>Fès</item>
+        <item>Tanger</item>
+        <item>Agadir</item>
+        <item>Meknès</item>
+        <item>Oujda</item>
+        <item>Kénitra</item>
+        <item>Tétouan</item>
+        <item>Safi</item>
+        <item>El Jadida</item>
+        <item>Mohammedia</item>
+        <item>Béni Mellal</item>
+        <item>Nador</item>
+        <item>Taza</item>
+        <item>Settat</item>
+    </string-array>
+
+    <string name="select_city_prompt">Sélectionnez une ville</string>
+</resources>

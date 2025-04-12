@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Photo Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photo:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="75dp"
+                app:cardElevation="8dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/editPhotoImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_person_placeholder"
+                    android:background="@drawable/bg_circle"
+                    android:clipToOutline="true"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+        <!-- Nom Field -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editTakePhotoButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="Prendre photo"
+            app:icon="@drawable/ic_camera"
+            app:iconTint="@color/primary_color"
+            app:strokeColor="@color/primary_color" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Nom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Prénom Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Prénom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPrenomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Date de naissance Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Date de naissance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editDateNaissanceTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:text="Sélectionner une date"
+                    android:textColor="@android:color/black"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/editSelectDateButton"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choisir"
+                    android:textColor="@color/primary_color"/>
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Sexe Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexe:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"/>
+
+        <RadioGroup
+            android:id="@+id/editSexeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/editHommeRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Homme"
+                android:layout_marginEnd="24dp"
+                app:buttonTint="@color/radio_color"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/editFemmeRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femme"
+                app:buttonTint="@color/radio_color"/>
+        </RadioGroup>
+
+        <!-- Ville Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Ville">
+
+            <Spinner
+                android:id="@+id/editVilleSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>
